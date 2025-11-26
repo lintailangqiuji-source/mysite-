@@ -23,6 +23,8 @@ img {
 .container {
   max-width: 800px;
   margin: 0 auto;
+  width: calc(100% - 32px);
+ box-sizing: border-box;
 }
 
 /* header */
@@ -31,7 +33,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 16px 0;
 }
 
 /* hero */
@@ -53,11 +55,24 @@ header {
   display: inline;
 }
 
+h1 {
+  margin: 0;
+  font-size: 0;
+}
 
-h2,
-h3 {
+h2{
   font-weight: normal;
   text-align: center;
+ margin: 0;
+}
+h3 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+
 }
 
 .hero img {
@@ -70,14 +85,14 @@ h3 {
 
 /* .features */
 .features {
-  padding: 64px 16px;
+  padding: 64px 0;
 }
 
 .feature {
   margin-top: 64px;
 }
 
-.feature div {
+.pic{
   text-align: center;
 }
 
@@ -88,6 +103,12 @@ h3 {
 .feature p {
   margin-top: 16px;
 }
+
+.feature {
+  display: flex;
+  gap: 32px;
+}
+
 
 /* footer */
 
@@ -124,4 +145,14 @@ small {
     display: inline;
   }
 
+.pic {
+  width: 300px;
+}
+
+.desc {
+  flex: 1;
+}
+
+.reversed {
+  flex-direction: row-reverse;
 }
