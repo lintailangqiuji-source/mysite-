@@ -18,13 +18,14 @@ img {
   padding: 8px 16px;
   border-radius: 8px;
   display: inline-block;
+  text-decoration: none;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   width: calc(100% - 32px);
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* header */
@@ -51,22 +52,19 @@ header {
   display: none;
 }
 
-.logo-sp {
-  display: inline;
-}
-
 h1 {
   margin: 0;
   font-size: 0;
 }
 
-h2{
+h2 {
+   margin: 0;
   font-weight: normal;
   text-align: center;
- margin: 0;
 }
+
 h3 {
-  margin: 0;
+    margin: 0;
   font-weight: normal;
 }
 
@@ -92,7 +90,7 @@ p {
   margin-top: 64px;
 }
 
-.pic{
+.pic {
   text-align: center;
 }
 
@@ -103,12 +101,6 @@ p {
 .feature p {
   margin-top: 16px;
 }
-
-.feature {
-  display: flex;
-  gap: 32px;
-}
-
 
 /* footer */
 
@@ -128,14 +120,6 @@ small {
 @media (min-width: 600px) {
 
   /* header */
-  .hero-inner {
-    display: flex;
-    align-items: center;
-  }
-
-  .hero-inner div {
-    flex: 1;
-  }
 
   .logo-sp {
     display: none;
@@ -145,14 +129,37 @@ small {
     display: inline;
   }
 
-.pic {
-  width: 300px;
-}
+  /* hero */
+  .hero .container {
+    display: flex;
+    align-items: center;
+  }
 
-.desc {
-  flex: 1;
-}
+  .hero .container div {
+    flex: 1;
+  }
 
-.reversed {
-  flex-direction: row-reverse;
+  .hero img {
+    margin-top: 0;
+  }
+
+  /* features */
+
+  .feature {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  .pic {
+    width: 300px;
+  }
+
+  .desc {
+    flex: 1;
+  }
+
+  .reversed {
+    flex-direction: row-reverse;
+  }
 }
